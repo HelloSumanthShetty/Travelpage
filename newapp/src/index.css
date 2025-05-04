@@ -1,0 +1,44 @@
+@import "tailwindcss";
+/* Imagine your element is a dog on a leash:
+
+w-full says: “Go ahead, take up all the space you can.”
+
+max-w-md says: “But don’t go past this line (448px).”
+
+So if the parent is 900px wide:
+
+The card would stretch up to 448px, not more.
+
+On smaller screens (like 300px wide), it would take 100% of that 300px.
+ */
+
+@layer base {
+  body {
+    background-color: rgb(255, 255, 255);
+    
+  }
+}
+
+
+
+@layer components{
+    .card{
+        @apply w-full max-w-md md:w-4/5 md:max-w-4xl rounded-lg my-5 overflow-hidden shadow-md shadow-zinc-800 hover:shadow-lg border-2 border-gray-200 flex flex-col md:flex-row
+    }
+.cardbody{
+    @apply p-4  flex-1  flex  flex-col justify-between
+}
+.cardimg{
+    @apply h-48 md:h-auto md:w-1/2 object-cover 
+}
+.card-title{
+    @apply text-zinc-900 font-bold text-2xl ml-4 hover:underline  hover:scale-105 active:scale-105 ease-in-out transition-transform duration-300
+}
+.card-text{
+    @apply text-zinc-500 my-2 px-2
+}
+.card-btn{
+    @apply text-white font-semibold bg-red-800  rounded-lg px-2  py-1 hover:bg-red-500 flex justify-center 
+}
+
+}
