@@ -1,16 +1,4 @@
 @import "tailwindcss";
-/* Imagine your element is a dog on a leash:
-
-w-full says: “Go ahead, take up all the space you can.”
-
-max-w-md says: “But don’t go past this line (448px).”
-
-So if the parent is 900px wide:
-
-The card would stretch up to 448px, not more.
-
-On smaller screens (like 300px wide), it would take 100% of that 300px.
- */
 
 @layer base {
   body {
